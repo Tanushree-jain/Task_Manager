@@ -11,32 +11,32 @@
         <div class="form-section">
   
           <h2>Sign Up</h2>
-          <form>
+          <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
             <div class="row">
               <div class="col-1">
                 <i class= "fa fa-user-circle-o form_icon"></i>
               </div>
               <div class="col-11">
-                <input type="text" placeholder="Username" required />
+                <input type="text" placeholder="Username" required  formControlName="name"/>
               </div>
               <div class="col-1">
                 <i class= "fa fa-envelope form_icon"></i>
               </div>
               <div class="col-11">
-                <input type="text" placeholder="Email" required />
+                <input type="email" placeholder="Email" required formControlName="email"/>
               </div>
            
             <div class="col-1">
               <i class= "fa fa-key form_icon"></i>
             </div>
            <div class="col-11">
-            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Password" autocomplete required formControlName="password"/>
            </div>
            <div class="col-1">
             <i class= "fa fa-lock form_icon"></i>
           </div>
          <div class="col-11">
-          <input type="password" placeholder="Confirm Password" required />
+          <input type="password" placeholder="Confirm Password" required formControlName="confirmpassword" autocomplete/>
          </div>
           </div>
           <div class="text-center">
