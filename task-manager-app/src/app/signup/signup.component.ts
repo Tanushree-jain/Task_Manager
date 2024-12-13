@@ -14,6 +14,7 @@ export class SignupComponent {
 
   constructor(private router: Router, private notiServ:NotificationService) {
     this.signForm = new FormGroup({
+      fullname: new FormControl('',Validators.required),
       name: new FormControl('',Validators.required),
       email: new FormControl('',Validators.required),
       password: new FormControl('',Validators.required),
